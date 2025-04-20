@@ -4,6 +4,7 @@ services:
     build: ./api
     pots:
       - 8080:8080
+    tty: true
     volumes:
       - ./api:/workspace:cached
 
@@ -12,6 +13,7 @@ services:
     build: ./web
     ports:
       - 3000:3000
+    tty: true
     volumes:
       - ./web:/workspace:cached
     dependes_on:
