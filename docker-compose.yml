@@ -1,8 +1,8 @@
 services:
   api:
-    conatiner_name: api
+    container_name: api
     build: ./api
-    pots:
+    ports:
       - 8080:8080
     tty: true
     volumes:
@@ -16,5 +16,5 @@ services:
     tty: true
     volumes:
       - ./web:/workspace:cached
-    dependes_on:
+    depends_on:
       - api
